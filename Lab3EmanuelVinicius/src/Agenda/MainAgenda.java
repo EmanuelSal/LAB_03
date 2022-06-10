@@ -76,7 +76,7 @@ public class MainAgenda {
 			sai();
 			break;
 		default:
-			System.out.println("Opção inválida!");
+			System.out.println("OPÇÃO INVÁLIDA!");
 		}
 	}
 
