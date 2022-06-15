@@ -87,10 +87,10 @@ public class MainAgenda {
 	 */
 	private static void listaContatos(Agenda agenda) {
 		System.out.println("\nLista de contatos: ");
-		String[] contatos = agenda.getContatos();
+		Contato[] contatos = agenda.getContatos();
 		for (int i = 0; i < contatos.length; i++) {
 			if (contatos[i] != null) {
-				System.out.println(formataContato(i, contatos[i]));
+				System.out.println(formataContato(i+1, contatos[i]));
 			}
 		}
 	}
@@ -104,7 +104,7 @@ public class MainAgenda {
 	private static void exibeContato(Agenda agenda, Scanner scanner) {
 		System.out.print("\nQual contato> ");
 		int posicao = scanner.nextInt();
-		String contato = agenda.getContato(posicao);
+		Contato contato = agenda.getContato(posicao);
 		System.out.println("Dados do contato:\n" + contato);
 	}
 
@@ -112,11 +112,11 @@ public class MainAgenda {
 	 * Formata um contato para impressão na interface. 
 	 * 
 	 * @param posicao A posição do contato (que é exibida)/
-	 * @param contato O contato a ser impresso.
+	 * @param contatos O contato a ser impresso.
 	 * @return A String formatada.
 	 */
-	private static String formataContato(int posicao, String contato) {
-		return posicao + " - " + contato;
+	private static String formataContato(int posicao, Contato contatos) {
+		return posicao + " - " + contatos;
 	}
 
 	/**
@@ -135,6 +135,7 @@ public class MainAgenda {
 		System.out.print("\nTelefone> ");
 		String telefone = scanner.next();
 		agenda.cadastraContato(posicao, nome, sobrenome, telefone);
+		System.out.println("CADASTRO REALIZADO");
 	}
 
 	/**
