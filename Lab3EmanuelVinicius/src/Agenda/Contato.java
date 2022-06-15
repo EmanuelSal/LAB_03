@@ -44,8 +44,8 @@ public class Contato {
 	 * @param nome da contato
 	 * @return o nome
 	 */
-	public String getContato(String nome) {
-		return this.nome = nome;
+	public String getNome() {
+		return this.nome;
 	}
 	
 	/**
@@ -53,8 +53,8 @@ public class Contato {
 	 * @param sobrenome
 	 * @return o sobrenome do contato
 	 */
-	public String getSobrenome(String sobrenome) {
-		return this.sobrenome = sobrenome;
+	public String getSobrenome() {
+		return this.sobrenome;
 	}
 	
 	/**
@@ -62,7 +62,11 @@ public class Contato {
 	 * @param numero de telefone do contato
 	 * @return telefone do contato
 	 */
-	public String getNumero(String numero) {
-		return this.telefone = numero;
+	public String getNumero() {
+		return this.telefone;
+	}
+	public String toString( ) {
+		return this.nome + " " + this.sobrenome;
+		
 	}
 }
