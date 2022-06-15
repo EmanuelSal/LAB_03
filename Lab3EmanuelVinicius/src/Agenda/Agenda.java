@@ -25,14 +25,14 @@ public class Agenda {
 	public Contato[] getContatos() {
 		return this.contatos.clone();
 	}
-
+	
 	/**
 	 * Acessa os dados de um contato específico.
 	 * @param posicao Posição do contato na agenda.
 	 * @return Dados do contato. Null se não há contato na posição.
 	 */
 	public Contato getContato(int posicao) {
-		return contatos[posicao];
+		return contatos[posicao - 1];
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class Agenda {
 	 * @param telefone Telefone do contato.
 	 */
 	public void cadastraContato(int posicao, String nome, String sobrenome, String telefone) {
-		this.contatos[posicao] = nome;
+		this.contatos[posicao -1] = new Contato(nome, sobrenome, telefone);
 	}
 
 }
