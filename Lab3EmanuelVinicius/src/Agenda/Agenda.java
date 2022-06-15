@@ -1,5 +1,4 @@
 package agenda;
-
 /**
  * Uma agenda que mantém uma lista de contatos com posições. Podem existir 100 contatos. 
  * 
@@ -10,20 +9,20 @@ public class Agenda {
 	
 	private static final int TAMANHO_AGENDA = 100;
 	
-	private String[] contatos;
+	private Contato[] contatos;
 
 	/**
 	 * Cria uma agenda.
 	 */
 	public Agenda() {
-		this.contatos = new String[TAMANHO_AGENDA];
+		this.contatos = new Contato[TAMANHO_AGENDA];
 	}
 	
 	/**
 	 * Acessa a lista de contatos mantida.
 	 * @return O array de contatos.
 	 */
-	public String[] getContatos() {
+	public Contato[] getContatos() {
 		return this.contatos.clone();
 	}
 
@@ -32,7 +31,7 @@ public class Agenda {
 	 * @param posicao Posição do contato na agenda.
 	 * @return Dados do contato. Null se não há contato na posição.
 	 */
-	public String getContato(int posicao) {
+	public Contato getContato(int posicao) {
 		return contatos[posicao];
 	}
 
